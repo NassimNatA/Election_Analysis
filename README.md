@@ -16,22 +16,22 @@ From the generated python script (under PyPoll_ChallengeFinal.py) the following 
 ---
 Per above, it can be seen that a total of 369.711 votes were cast. This was obtained by creating a for loop below: 
 
-with open(file_to_load) as election_data:
-reader = csv.reader(election_data)
-header = next(reader)
-for row in reader:
+        with open(file_to_load) as election_data:
+        reader = csv.reader(election_data)
+        header = next(reader)
+        for row in reader:
         total_votes = total_votes + 1
         candidate_name = row[2]
         county_names = row [1]
 
 Then printing to the election_analysis.txt file: 
-    >election_results = (
-        >f"\nElection Results\n"
-        >f"-------------------------\n"
-        >f"Total Votes: {total_votes:,}\n"
-        >f"-------------------------\n\n"
-        >f"County Votes:\n")
-    >print(election_results, end="")
+        election_results = (
+        f"\nElection Results\n"
+                f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n\n"
+        f"County Votes:\n")
+    print(election_results, end="")
     
 ---
 A breakdown of the number of votes and the percentage of total votes for each county in the precinct shows that Denver county had the largest number of votes: 
@@ -41,10 +41,10 @@ A breakdown of the number of votes and the percentage of total votes for each co
 3.Araphone county had a total of 24,801 votes. 
 
 This readout was obtained by the following code: 
->for county_names in county_votes_dict:
-        >cvotes = county_votes_dict[county_names]
-        >c_v_percentage = float(cvotes) / float(total_votes) * 100
-   >county_results = (
+for county_names in county_votes_dict:
+cvotes = county_votes_dict[county_names]
+c_v_percentage = float(cvotes) / float(total_votes) * 100
+county_results = (
             f"{county_names}: {c_v_percentage:.1f}% ({cvotes:,})\n")
 Then printing the code to the terminal: 
  >print(county_results)
