@@ -8,7 +8,62 @@ This project pulls data from an election audit of a recent local congressional e
 4. Percentage of votes each candidate won
 5. The winner of the election based on popular vote
 
+---
 ## Election Audit Results 
 From the generated python script (under PyPoll_ChallengeFinal.py) the following readout was obtained: 
 ![alt text](https://github.com/NassimNatA/Election_Analysis/blob/master/Terminal_Screenshot.png)
 
+---
+Per above, it can be seen that a total of 369.711 votes were cast. This was obtained by creating a for loop below: 
+
+with open(file_to_load) as election_data:
+    reader = csv.reader(election_data)
+    header = next(reader)
+ for row in reader:
+        total_votes = total_votes + 1
+        candidate_name = row[2]
+        county_names = row [1]
+
+Then printing to the election_analysis.txt file: 
+    # Print the final vote count (to terminal)
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n\n"
+        f"County Votes:\n")
+    print(election_results, end="")
+    
+---
+A breakdown of the number of votes and the percentage of total votes for each county in the precinct shows that Denver county had the largest number of votes: 
+
+*Jefferson county had a total of 38, 855 votes. 
+*Denver county had a total of 305,055 votes. 
+*Araphone county had a total of 24,801 votes. 
+This readout was obtained by the following code: 
+for county_names in county_votes_dict:
+        cvotes = county_votes_dict[county_names]
+        # 6c: Calculate the percent of total votes for the county.
+        c_v_percentage = float(cvotes) / float(total_votes) * 100
+   county_results = (
+            f"{county_names}: {c_v_percentage:.1f}% ({cvotes:,})\n")
+Then printing the code to the terminal: 
+ print(county_results)
+ 
+---
+A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%): 
+
+*Stockham: (85,213) 23.0$
+*DeGette: (272,892) 73.8%
+*Doan: (11,606) 3.1%
+This readout was obtained by the following code: 
+for candidate_name in candidate_votes:
+        votes = candidate_votes.get(candidate_name)
+        vote_percentage = float(votes) / float(total_votes) * 100
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+Then printing the code to the terminal: 
+print(candidate_results)
+
+---
+An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy. 
