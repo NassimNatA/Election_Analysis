@@ -37,7 +37,9 @@ Then printing to the election_analysis.txt file:
 A breakdown of the number of votes and the percentage of total votes for each county in the precinct shows that Denver county had the largest number of votes: 
 
 1.Jefferson county had a total of 38, 855 votes. 
+
 2.Denver county had a total of 305,055 votes. 
+
 3.Araphone county had a total of 24,801 votes. 
 
 This readout was obtained by the following code: 
@@ -55,7 +57,9 @@ Then printing the code to the terminal:
 A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%): 
 
 1.Stockham: (85,213) 23.0$
+
 2.DeGette: (272,892) 73.8%
+
 3.Doan: (11,606) 3.1%
 
 This readout was obtained by the following code: 
