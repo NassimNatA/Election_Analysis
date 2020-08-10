@@ -77,4 +77,13 @@ Then printing the code to the terminal:
         print(candidate_results)
 
 ---
-* An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy. 
+* An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy.
+---
+
+## Election-Audit Summary
+
+As shown above, this script breaks down the election data to produce a comprehensive summary of the election results. This script can be further used for any election outside of the provided election data from this Module. For example, the framework for: tracking a winning candidate, retriving vote count and percentage, determining winning vote count/winning percentage/and candidate can be retained while modifying two things in the script to make it more versatile: 
+
+1. Retrieve state_vote instead of county_vote to apply this script to state-wide elections. 
+
+2. For the candidate winner, determine how many votes they won by adding percent difference calculation after determining  winning vote count, winning percentage, and candidate.
