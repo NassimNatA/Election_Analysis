@@ -25,8 +25,8 @@ Per above, it can be seen that a total of 369.711 votes were cast. This was obta
         county_names = row [1]
 
 Then printing to the election_analysis.txt file: 
-        election_results = (
-        f"\nElection Results\n"
+
+        election_results = (f"\nElection Results\n"
                 f"-------------------------\n"
         f"Total Votes: {total_votes:,}\n"
         f"-------------------------\n\n"
@@ -41,13 +41,15 @@ A breakdown of the number of votes and the percentage of total votes for each co
 3.Araphone county had a total of 24,801 votes. 
 
 This readout was obtained by the following code: 
-for county_names in county_votes_dict:
-cvotes = county_votes_dict[county_names]
-c_v_percentage = float(cvotes) / float(total_votes) * 100
-county_results = (
+
+        for county_names in county_votes_dict:
+        cvotes = county_votes_dict[county_names]
+        c_v_percentage = float(cvotes) / float(total_votes) * 100
+        county_results = (
             f"{county_names}: {c_v_percentage:.1f}% ({cvotes:,})\n")
 Then printing the code to the terminal: 
- >print(county_results)
+
+        print(county_results)
  
 ---
 A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%): 
@@ -57,13 +59,15 @@ A breakdown of the number of votes and the percentage of the total votes for eac
 3.Doan: (11,606) 3.1%
 
 This readout was obtained by the following code: 
-for candidate_name in candidate_votes:
-votes = candidate_votes.get(candidate_name)
-vote_percentage = float(votes) / float(total_votes) * 100
-candidate_results = (
+
+        for candidate_name in candidate_votes:
+        votes = candidate_votes.get(candidate_name)
+        vote_percentage = float(votes) / float(total_votes) * 100
+        candidate_results = (
     f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 Then printing the code to the terminal: 
-print(candidate_results)
+
+        print(candidate_results)
 
 ---
 An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy. 
