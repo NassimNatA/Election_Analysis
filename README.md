@@ -34,7 +34,8 @@ Then printing to the election_analysis.txt file:
     print(election_results, end="")
     
 ---
-*A breakdown of the number of votes and the percentage of total votes for each county in the precinct shows that Denver county had the largest number of votes: 
+
+* A breakdown of the number of votes and the percentage of total votes for each county in the precinct shows that Denver county had the largest number of votes:
 
 1.Jefferson county had a total of 38, 855 votes. 
 
@@ -54,7 +55,7 @@ Then printing the code to the terminal:
         print(county_results)
  
 ---
-*A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%): 
+*A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%):*
 
 1.Stockham: (85,213) 23.0$
 
