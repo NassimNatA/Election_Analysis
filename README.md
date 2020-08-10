@@ -15,13 +15,14 @@ From the generated python script (under PyPoll_ChallengeFinal.py) the following 
 
 ---
 Per above, it can be seen that a total of 369.711 votes were cast. This was obtained by creating a for loop below: 
-*with open(file_to_load) as election_data:
-*reader = csv.reader(election_data)
-*header = next(reader)
-*for row in reader:
-        *total_votes = total_votes + 1
-        *candidate_name = row[2]
-        *county_names = row [1]
+
+with open(file_to_load) as election_data:
+reader = csv.reader(election_data)
+header = next(reader)
+for row in reader:
+        total_votes = total_votes + 1
+        candidate_name = row[2]
+        county_names = row [1]
 
 Then printing to the election_analysis.txt file: 
     >election_results = (
@@ -56,7 +57,7 @@ A breakdown of the number of votes and the percentage of the total votes for eac
 3.Doan: (11,606) 3.1%
 
 This readout was obtained by the following code: 
->for candidate_name in candidate_votes:
+for candidate_name in candidate_votes:
 votes = candidate_votes.get(candidate_name)
 vote_percentage = float(votes) / float(total_votes) * 100
 candidate_results = (
