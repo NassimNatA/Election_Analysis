@@ -14,7 +14,8 @@ From the generated python script (under PyPoll_ChallengeFinal.py) the following 
 ![alt text](https://github.com/NassimNatA/Election_Analysis/blob/master/Terminal_Screenshot.png)
 
 ---
-Per above, it can be seen that a total of 369.711 votes were cast. This was obtained by creating a for loop below: 
+
+* Per above, it can be seen that a total of 369.711 votes were cast. This was obtained by creating a for loop below: 
 
         with open(file_to_load) as election_data:
         reader = csv.reader(election_data)
@@ -55,7 +56,8 @@ Then printing the code to the terminal:
         print(county_results)
  
 ---
-*A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%):*
+
+* A breakdown of the number of votes and the percentage of the total votes for each candidate show that DeGette had the largest number of votes with a total of 272,892 (74.8%):
 
 1.Stockham: (85,213) 23.0$
 
@@ -75,4 +77,4 @@ Then printing the code to the terminal:
         print(candidate_results)
 
 ---
-An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy. 
+* An observation from this script is that Denver is not in the terminal readout as the county with the highest number of votes, further debugging is required to utilize this script for complete accuracy. 
