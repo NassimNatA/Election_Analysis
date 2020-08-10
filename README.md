@@ -10,4 +10,5 @@ This project pulls data from an election audit of a recent local congressional e
 
 ## Election Audit Results 
 From the generated python script (under PyPoll_ChallengeFinal.py) the following readout was obtained: 
-![Terminal_Screenshot](/Users/nassimnatalieataii/Desktop/Terminal_Screenshot.png
+![alt text](https://github.com/NassimNatA/Election_Analysis/blob/master/Terminal_Screenshot.png)
+
